@@ -1,0 +1,9 @@
+.venv
+.git
+__pycache__
+*.pyc
+data/synthetic
+*.zip
+Problem Statement 3
+.claude
+.pytest_cache
