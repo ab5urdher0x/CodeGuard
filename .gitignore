@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.zip
+.pytest_cache/
+hacked.txt
+safe_marker.txt
+.env
+Problem Statement 3/
+.claude/
+data/synthetic/
+
+bin/
