@@ -2,7 +2,7 @@
 
 ## Model
 - **Type:** OneVsRest LogisticRegression (9 categories, multi-label), CPU-only.
-- **Features:** 68 symbolic engine features (`engine/features.py`) ⊕ 3,000 TF-IDF char n-grams (3–5).
+- **Features:** 68 symbolic engine features (`engine/features.py`) ⊕ 3,000 TF-IDF char n-grams (3-5).
 - **Trained on:** `data/synthetic/train.jsonl` only (1,194 rows). Never dev / validation / challenge / hold-out.
 - **Size:** ~334 KB (`engine/ml/artifacts/head.joblib`). No torch at inference.
 
@@ -12,7 +12,7 @@ runs and refines. A guardrail keeps the symbolic layer in charge of allow/block:
 refines scores and corroborates categories on flagged cases, never flips a benign result
 to block. Set `CODEGUARD_USE_ML=0` for rules-only.
 
-## Ablation — rules vs rules+ML (measured, `eval/shadow_ml.py`)
+## Ablation , rules vs rules+ML (measured, `eval/shadow_ml.py`)
 
 | dataset | mode | P | R | F1 | FPR | p95 ms |
 |---|---|---|---|---|---|---|
