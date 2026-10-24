@@ -1,0 +1,21 @@
+{
+  "_about": "Threat-intel feed derived from public Oct 2026 ('Black October') incident reports. Behavioural rules in the engine generalise these; this feed only adds known-bad specifics. Update without code changes.",
+  "_sources": [
+    "https://www.endorlabs.com/learn/litellm-1-107-0-compromised-python-startup-hooks-steal-cloud-ai-and-proxy-credentials",
+    "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+    "https://www.aikido.dev/blog/litellm-compromised-infostealer-rat"
+  ],
+  "compromised_versions": {
+    "pypi": {"litellm": ["1.107.0"]}
+  },
+  "lookalike_domains": {
+    "litellm.dev": "litellm.ai"
+  },
+  "startup_hook_files": ["sitecustomize.py", "usercustomize.py"],
+  "startup_hook_suffixes": [".pth"],
+  "ai_provider_secret_env": [
+    "OPENAI_API_KEY", "ANTHROPIC_API_KEY", "GEMINI_API_KEY", "GOOGLE_API_KEY", "AZURE_OPENAI_API_KEY",
+    "MISTRAL_API_KEY", "COHERE_API_KEY", "GROQ_API_KEY", "HF_TOKEN", "HUGGINGFACE_HUB_TOKEN",
+    "LITELLM_MASTER_KEY", "OPENROUTER_API_KEY", "TOGETHER_API_KEY", "REPLICATE_API_TOKEN"
+  ]
+}
